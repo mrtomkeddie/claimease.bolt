@@ -10,7 +10,7 @@ import { ClaimEaseLogo } from './ClaimEaseLogo';
 import { Footer } from './Footer';
 import type { User } from '@/contexts/UserContext';
 import { UserTier } from '@/lib/constants';
-import { poppins, gilroyHeavy } from '@/lib/fonts';
+import { poppins } from '@/lib/fonts';
 import { AnimatedSection } from './AnimatedSection';
 
 interface OnboardingProps {
@@ -116,7 +116,7 @@ export function Onboarding({ onComplete }: OnboardingProps) {
             <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 sm:gap-8 lg:gap-12 flex-1 lg:items-center pb-12 pt-4 sm:pt-6">
               <div className="lg:col-span-7 flex flex-col justify-center space-y-4 sm:space-y-6 lg:space-y-8" ref={heroContentRef}>
                 <AnimatedSection animation="slide-up" className="space-y-3 sm:space-y-4">
-                    <h1 className={`${gilroyHeavy.className} text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-semibold tracking-tight leading-[1.1] text-foreground max-w-3xl`}>
+                    <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight leading-[1.1] text-foreground max-w-3xl">
                       Struggling with your PIP application?{' '}
                       <span className="bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent">
                         ClaimEase makes it easier.
@@ -140,7 +140,7 @@ export function Onboarding({ onComplete }: OnboardingProps) {
                         <Sparkles className="h-6 w-6 sm:h-7 sm:w-7 text-primary-foreground" />
                       </div>
                       <div className="space-y-2 sm:space-y-3">
-                        <CardTitle className={`${gilroyHeavy.className} text-lg sm:text-xl lg:text-2xl text-foreground`}>Start Your Claim</CardTitle>
+                        <CardTitle className="text-lg sm:text-xl lg:text-2xl text-foreground font-bold">Start Your Claim</CardTitle>
                         <CardDescription className="text-sm sm:text-sm lg:text-base leading-relaxed text-muted-foreground px-2 sm:px-0">
                           Let's get started. Enter your details below.
                         </CardDescription>
@@ -275,7 +275,7 @@ export function Onboarding({ onComplete }: OnboardingProps) {
             {/* Key Benefits Section */}
             <div className="mt-16 sm:mt-20 lg:mt-24 max-w-6xl mx-auto" ref={benefitsRef}>
               <AnimatedSection animation="slide-up" className="text-center space-y-3 sm:space-y-4 mb-8 sm:mb-10 lg:mb-12 px-4 sm:px-0">
-                <h2 className={`${gilroyHeavy.className} text-2xl sm:text-3xl lg:text-4xl font-medium text-foreground`}>
+                <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-foreground">
                   Why Choose ClaimEase?
                 </h2>
                 <p className="text-base sm:text-lg text-muted-foreground max-w-2xl mx-auto">
@@ -304,7 +304,7 @@ export function Onboarding({ onComplete }: OnboardingProps) {
             {/* How It Works Section - Minimal Vertical Steps */}
             <div className="mt-20 sm:mt-24 lg:mt-32 max-w-4xl mx-auto px-4 sm:px-0" ref={howItWorksRef}>
               <AnimatedSection animation="slide-up" className="text-center space-y-3 sm:space-y-4 mb-12 sm:mb-14 lg:mb-16">
-                <h2 className={`${gilroyHeavy.className} text-3xl lg:text-4xl font-medium text-foreground`}>
+                <h2 className="text-3xl lg:text-4xl font-bold text-foreground">
                   How it works
                 </h2>
                 <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
@@ -549,43 +549,4 @@ export function Onboarding({ onComplete }: OnboardingProps) {
                       <div className="flex-1">
                         <h3 className="font-medium text-lg mb-3 text-foreground">Can I add more claims later?</h3>
                         <p className="text-muted-foreground">
-                          Your £49 plan covers one full PIP claim. For unlimited claims and additional features like document uploads, consider upgrading to ClaimEase Pro for £79. This gives you everything you need for ongoing or complex cases.
-                        </p>
-                      </div>
-                    </div>
-                  </CardContent>
-                </Card>
-              </AnimatedSection>
-            </div>
-
-            {/* Final CTA Section */}
-            <div className="mt-28 text-center space-y-6">
-              <AnimatedSection animation="slide-up" className="space-y-4">
-                <h2 className="text-2xl lg:text-3xl font-medium text-foreground">
-                  Don't risk losing the benefits you deserve.
-                </h2>
-                <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-                  Start today — give your claim the best chance of success.
-                </p>
-              </AnimatedSection>
-              
-              <AnimatedSection animation="scale-in" delay={200}>
-                <Button size="lg" onClick={scrollToForm} className="bg-primary hover:bg-primary/90 active:bg-primary/80 text-primary-foreground px-8 py-3 min-h-[44px] transition-all duration-200">
-                  Start My Claim for £49 →
-                </Button>
-              </AnimatedSection>
-            </div>
-
-            {/* Mobile Sticky CTA */}
-            <div className="md:hidden fixed bottom-4 left-0 right-0 flex justify-center z-50 px-4">
-              <Button onClick={scrollToForm} className="px-6 py-3 bg-primary text-primary-foreground shadow-lg rounded-full min-h-[44px] hover:bg-primary/90 active:bg-primary/80 transition-all duration-200">
-                Start My Claim for £49 →
-                <ArrowRight className="h-4 w-4 ml-2" />
-              </Button>
-            </div>
-        </div>
-      </div>
-      <Footer />
-    </div>
-  );
-}
+                          Your £49 plan covers one full PIP claim. For unlimited claims and additional features like 
