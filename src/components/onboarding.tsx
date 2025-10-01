@@ -10,7 +10,6 @@ import { ClaimEaseLogo } from './ClaimEaseLogo';
 import { Footer } from './Footer';
 import type { User } from '@/contexts/UserContext';
 import { UserTier } from '@/lib/constants';
-import { poppins, gilroyHeavy } from '@/lib/fonts';
 import { AnimatedSection } from './AnimatedSection';
 
 interface OnboardingProps {
@@ -116,7 +115,7 @@ export function Onboarding({ onComplete }: OnboardingProps) {
             <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 sm:gap-8 lg:gap-12 flex-1 lg:items-center pb-12 pt-4 sm:pt-6">
               <div className="lg:col-span-7 flex flex-col justify-center space-y-4 sm:space-y-6 lg:space-y-8" ref={heroContentRef}>
                 <AnimatedSection animation="slide-up" className="space-y-3 sm:space-y-4">
-                    <h1 className={`${gilroyHeavy.className} text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-semibold tracking-tight leading-[1.1] text-foreground max-w-3xl`}>
+                    <h1 className={`font-semibold text-3xl sm:text-4xl md:text-5xl lg:text-6xl tracking-tight leading-[1.1] text-foreground max-w-3xl`}>
                       Struggling with your PIP application?{' '}
                       <span className="bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent">
                         ClaimEase makes it easier.
@@ -140,7 +139,7 @@ export function Onboarding({ onComplete }: OnboardingProps) {
                         <Sparkles className="h-6 w-6 sm:h-7 sm:w-7 text-primary-foreground" />
                       </div>
                       <div className="space-y-2 sm:space-y-3">
-                        <CardTitle className={`${gilroyHeavy.className} text-lg sm:text-xl lg:text-2xl text-foreground`}>Start Your Claim</CardTitle>
+                        <CardTitle className={`font-semibold text-lg sm:text-xl lg:text-2xl text-foreground`}>Start Your Claim</CardTitle>
                         <CardDescription className="text-sm sm:text-sm lg:text-base leading-relaxed text-muted-foreground px-2 sm:px-0">
                           Let's get started. Enter your details below.
                         </CardDescription>
@@ -275,7 +274,7 @@ export function Onboarding({ onComplete }: OnboardingProps) {
             {/* Key Benefits Section */}
             <div className="mt-16 sm:mt-20 lg:mt-24 max-w-6xl mx-auto" ref={benefitsRef}>
               <AnimatedSection animation="slide-up" className="text-center space-y-3 sm:space-y-4 mb-8 sm:mb-10 lg:mb-12 px-4 sm:px-0">
-                <h2 className={`${gilroyHeavy.className} text-2xl sm:text-3xl lg:text-4xl font-medium text-foreground`}>
+                <h2 className={`font-medium text-2xl sm:text-3xl lg:text-4xl text-foreground`}>
                   Why Choose ClaimEase?
                 </h2>
                 <p className="text-base sm:text-lg text-muted-foreground max-w-2xl mx-auto">
@@ -304,7 +303,7 @@ export function Onboarding({ onComplete }: OnboardingProps) {
             {/* How It Works Section - Minimal Vertical Steps */}
             <div className="mt-20 sm:mt-24 lg:mt-32 max-w-4xl mx-auto px-4 sm:px-0" ref={howItWorksRef}>
               <AnimatedSection animation="slide-up" className="text-center space-y-3 sm:space-y-4 mb-12 sm:mb-14 lg:mb-16">
-                <h2 className={`${gilroyHeavy.className} text-3xl lg:text-4xl font-medium text-foreground`}>
+                <h2 className={`font-medium text-3xl lg:text-4xl text-foreground`}>
                   How it works
                 </h2>
                 <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
