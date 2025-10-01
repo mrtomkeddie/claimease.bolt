@@ -1,8 +1,7 @@
 'use client';
 
 import React from 'react';
-import Link from 'next/link';
-import { usePathname } from 'next/navigation';
+import { useRouter, usePathname } from 'next/navigation';
 import { Button } from '@/components/ui/button';
 import { ClaimEaseLogo } from './ClaimEaseLogo';
 import { useUser } from '@/contexts/UserContext';
@@ -19,6 +18,7 @@ import {
 
 export function TopMenu() {
   const { user, setUser, getRemainingClaims } = useUser();
+  const router = useRouter();
   const pathname = usePathname();
 
   const handleLogout = () => {
@@ -35,15 +35,15 @@ export function TopMenu() {
           <div className="flex items-center gap-3">
             {pathname !== '/' && (
                <Button asChild variant="ghost" size="sm">
-                <Link href="/">
+                <button onClick={() => router.push('/')}>
                   <ArrowLeft className="mr-2 h-4 w-4" />
                   Back to Claim
-                </Link>
+                </button>
               </Button>
             )}
-             <Link href="/">
+             <button onClick={() => router.push('/')}>
               <ClaimEaseLogo />
-            </Link>
+            </button>
           </div>
 
           <nav className="flex items-center gap-2">
@@ -82,10 +82,10 @@ export function TopMenu() {
                 </DropdownMenuLabel>
                 <DropdownMenuSeparator />
                 <DropdownMenuItem asChild>
-                  <Link href="/account">
+                  <button onClick={() => router.push('/account')}>
                     <UserIcon className="mr-2 h-4 w-4" />
                     <span>My Account</span>
-                  </Link>
+                  </button>
                 </DropdownMenuItem>
                 <DropdownMenuSeparator />
                 <DropdownMenuItem onClick={handleLogout}>
